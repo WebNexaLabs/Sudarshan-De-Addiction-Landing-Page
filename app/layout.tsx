@@ -103,7 +103,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${publicSans.className} antialiased overflow-x-hidden pb-20 lg:pb-0`}>
+      <body className={`${publicSans.className} antialiased overflow-x-hidden`}>
         <Providers>
           {children}
           <MobileNav />

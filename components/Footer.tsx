@@ -2,106 +2,112 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-background-dark text-slate-400 pt-20 pb-32 md:pb-20 px-6 md:px-20 border-t border-slate-800/50">
+        <footer className="bg-[#0a1118] text-slate-400 pt-24 pb-32 md:pb-24 px-6 md:px-20 border-t border-slate-800/50">
             <div className="mx-auto max-w-7xl">
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16 border-b border-slate-800 pb-16">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-12 mb-16 border-b border-slate-800/50 pb-16">
+                    {/* Brand Section */}
                     <div className="flex flex-col gap-8 items-center md:items-start text-center md:text-left">
                         <div className="flex items-center gap-3">
                             <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20">
-                                <span className="material-symbols-outlined">health_and_safety</span>
+                                <span className="material-symbols-outlined font-black">health_and_safety</span>
                             </div>
-                            <h2 className="text-xl font-black text-white tracking-tighter">Sudarshan</h2>
+                            <h2 className="text-2xl font-black text-white tracking-tighter uppercase">Sudarshan</h2>
                         </div>
-                        <p className="text-sm leading-relaxed font-medium max-w-xs">
-                            Premium medical de-addiction facility dedicated to evidence-based recovery and clinical excellence since 2020.
+                        <p className="text-sm leading-relaxed font-medium max-w-xs text-slate-500">
+                            A beacon of clinical excellence and research-driven recovery in Kharagpur. Restoring lives since 2020.
                         </p>
                         <div className="flex gap-4">
                             {[
-                                { icon: "verified", label: "Certificates/Team", href: "/about#team" },
-                                { icon: "mail", label: "Email Support", href: "mailto:support@sudarshanrecovery.org" },
-                                { icon: "call", label: "Call Center", href: "tel:+919804188668" },
+                                { icon: "verified", label: "Verification", href: "/about#team" },
+                                { icon: "mail", label: "Email", href: "mailto:support@sudarshanrecovery.org" },
+                                { icon: "call", label: "Call", href: "tel:+919804188668" },
                             ].map((social, idx) => (
                                 <a
                                     key={idx}
                                     href={social.href}
                                     aria-label={social.label}
-                                    className="h-10 w-10 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
+                                    className="h-12 w-12 rounded-2xl border border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group scale-90 md:scale-100"
                                 >
-                                    <span className="material-symbols-outlined text-lg">{social.icon}</span>
+                                    <span className="material-symbols-outlined text-xl">{social.icon}</span>
                                 </a>
                             ))}
                         </div>
                     </div>
 
-                    <div className="text-center md:text-left lg:col-span-2">
-                        <div className="grid grid-cols-2 gap-8">
-                            <div>
-                                <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Navigation</h6>
-                                <ul className="flex flex-col gap-5 text-sm font-medium">
-                                    <li><Link className="hover:text-primary transition-colors" href="/treatments">Our Programs</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors" href="/admission">Admission</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors" href="/gallery">Gallery</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors" href="/contact">Contact</Link></li>
+                    {/* Navigation - 2 columns on all devices for better density */}
+                    <div className="lg:col-span-2">
+                        <div className="grid grid-cols-2 gap-8 md:gap-12">
+                            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                                <h6 className="text-[10px] text-white font-black uppercase tracking-[0.3em] mb-8 opacity-50">Discovery</h6>
+                                <ul className="flex flex-col gap-6 text-[13px] font-bold text-slate-300">
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/treatments">Our Programs</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/admission">Admission</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/gallery">Facility Tour</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/contact">Get Help</Link></li>
                                 </ul>
                             </div>
-                            <div>
-                                <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Institutional</h6>
-                                <ul className="flex flex-col gap-5 text-sm font-medium">
-                                    <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors" href="/vision">Our Vision</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors" href="/about#team">Medical Team</Link></li>
+                            <div className="flex flex-col items-center md:items-start text-center md:text-left">
+                                <h6 className="text-[10px] text-white font-black uppercase tracking-[0.3em] mb-8 opacity-50">Institutional</h6>
+                                <ul className="flex flex-col gap-6 text-[13px] font-bold text-slate-300">
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/about">About Center</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/vision">Medical Vision</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/about#team">Clinical Team</Link></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
-                    <div className="text-center md:text-left">
-                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Trust & Compliance</h6>
-                        <div className="flex flex-col gap-5 items-center md:items-start">
-                            <div className="flex items-center gap-3 group">
-                                <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                    <span className="material-symbols-outlined text-xs">verified</span>
+                    {/* Compliance Section */}
+                    <div className="flex flex-col gap-8 items-center md:items-start text-center md:text-left">
+                        <h6 className="text-[10px] text-white font-black uppercase tracking-[0.3em] mb-2 opacity-50">Accreditation</h6>
+                        <div className="flex flex-col gap-6 w-full">
+                            <div className="flex items-center justify-center md:justify-start gap-4 group bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <span className="material-symbols-outlined text-primary font-black">verified</span>
+                                <div className="flex flex-col items-start gap-0.5">
+                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">ISO Standard</span>
+                                    <span className="text-[11px] font-bold text-slate-200">9001:2015 Facility</span>
                                 </div>
-                                <span className="text-xs font-bold text-slate-300">ISO 9001:2015 Facility</span>
                             </div>
-                            <div className="flex items-center gap-3 group">
-                                <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                                    <span className="material-symbols-outlined text-xs">account_balance</span>
+                            <div className="flex items-center justify-center md:justify-start gap-4 group bg-white/5 p-4 rounded-2xl border border-white/5">
+                                <span className="material-symbols-outlined text-primary font-black">account_balance</span>
+                                <div className="flex flex-col items-start gap-0.5">
+                                    <span className="text-[9px] font-black uppercase tracking-widest text-slate-500">NITI Aayog</span>
+                                    <span className="text-[11px] font-bold text-slate-200">Darpan Verified</span>
                                 </div>
-                                <span className="text-xs font-bold text-slate-300">NITI Aayog Darpan Verified</span>
                             </div>
-                            <p className="text-[10px] text-slate-500 mt-4 italic leading-relaxed border-l-2 border-slate-800 pl-4 text-left">
-                                Registered NGO. Compliance with Ministry of Health & Family Welfare guidelines.
-                            </p>
                         </div>
                     </div>
                 </div>
 
-                <div className="flex flex-col lg:flex-row justify-between items-center gap-10 pt-10 border-t border-slate-800/30">
-                    <div className="flex flex-col md:flex-row items-center gap-6 md:gap-8">
+                {/* Bottom Bar */}
+                <div className="flex flex-col lg:flex-row justify-between items-center gap-12 pt-4">
+                    <div className="flex flex-col md:flex-row items-center gap-10">
                         <div className="flex flex-col items-center md:items-start gap-1">
-                            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500">Official Facility</p>
-                            <p className="text-xs font-bold text-slate-300">© {new Date().getFullYear()} Sudarshan Center.</p>
+                            <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-600 mb-1">Authentic Care</p>
+                            <p className="text-[11px] font-bold text-slate-400">©{new Date().getFullYear()} Sudarshan Center. KHG-WB.</p>
                         </div>
-                        <div className="h-8 w-px bg-slate-800 hidden md:block"></div>
-                        <div className="flex items-center gap-3 group">
-                            <span className="text-[10px] font-black text-slate-500 uppercase tracking-widest">Designed by</span>
+
+                        <div className="h-10 w-px bg-slate-800 hidden md:block"></div>
+
+                        <div className="flex items-center gap-4 group">
+                            <span className="text-[10px] font-black text-slate-600 uppercase tracking-widest">Designed by</span>
                             <a
                                 href="https://webnexalabs.dev"
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="px-4 py-1.5 rounded-full bg-white/5 border border-white/10 flex items-center gap-2 group-hover:bg-primary/10 group-hover:border-primary/30 transition-all duration-500 cursor-pointer"
+                                className="px-5 py-2 rounded-full bg-primary/5 border border-primary/10 flex items-center gap-3 hover:bg-primary hover:border-primary transition-all duration-500 group"
                             >
-                                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse"></span>
-                                <span className="text-[11px] font-black text-white tracking-tighter">WebNexaLabs</span>
+                                <span className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse group-hover:bg-white transition-colors"></span>
+                                <span className="text-[11px] font-black text-white tracking-tighter uppercase">WebNexaLabs</span>
+                                <span className="material-symbols-outlined text-xs text-white opacity-0 group-hover:opacity-100 transition-all translate-x-[-10px] group-hover:translate-x-0">arrow_outward</span>
                             </a>
                         </div>
                     </div>
 
-                    <div className="flex flex-wrap justify-center gap-x-8 gap-y-4 text-[9px] font-black uppercase tracking-[0.2em] items-center">
-                        <Link className="hover:text-primary transition-colors" href="/privacy">Privacy Protocol</Link>
-                        <div className="h-3 w-px bg-slate-800 hidden sm:block"></div>
-                        <Link className="hover:text-primary transition-colors" href="/terms">Terms of Service</Link>
+                    <div className="flex items-center gap-8 text-[11px] font-black uppercase tracking-[0.2em] text-slate-500">
+                        <Link className="hover:text-white transition-colors" href="/privacy">Privacy</Link>
+                        <span className="h-1 w-1 bg-slate-800 rounded-full"></span>
+                        <Link className="hover:text-white transition-colors" href="/terms">Terms</Link>
                     </div>
                 </div>
             </div>
