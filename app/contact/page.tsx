@@ -3,97 +3,90 @@ import Footer from "@/components/Footer";
 import ContactForm from "@/components/ContactForm";
 
 export default function ContactPage() {
-    const protocols = [
-        { title: "Secure Inquiry", desc: "Your message is encrypted and sent to our clinical oversight team.", icon: "lock" },
-        { title: "Medical Triage", desc: "Our staff clinicians review the urgency of the recovery request.", icon: "clinical_notes" },
-        { title: "Direct Contact", desc: "A specialist calls you back within 2 business hours for assistance.", icon: "call" }
-    ];
-
     return (
         <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden">
             <Navbar />
             <main className="flex-1">
-                {/* Enhanced Hero Section - Institutional Sanctuary */}
-                <section className="relative px-6 md:px-20 pt-24 pb-20 bg-[#f8fafc] dark:bg-[#0a1118] overflow-hidden">
-                    <div className="mx-auto max-w-7xl relative z-10">
+                {/* Hero Section - Clean Clinical Design */}
+                <section className="relative px-6 md:px-20 pt-20 pb-16 bg-white dark:bg-background-dark">
+                    <div className="mx-auto max-w-7xl">
                         <div className="flex flex-col items-center text-center">
-                            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-6 py-2 text-primary mb-10 animate-fade-in shadow-sm border border-primary/10">
-                                <span className="material-symbols-outlined text-sm animate-pulse">quick_reference_all</span>
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em] italic">Compassionate Access Center</span>
+                            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-primary mb-8 animate-fade-in shadow-sm border border-primary/10">
+                                <span className="material-symbols-outlined text-sm">support_agent</span>
+                                <span className="text-xs font-black uppercase tracking-widest italic">Clinical Support Services</span>
                             </div>
-                            <h1 className="text-4xl md:text-8xl font-black leading-[0.95] tracking-[ -0.05em] text-slate-900 dark:text-white mb-10 uppercase italic">
-                                Healing Starts <br /><span className="text-primary italic">With a Conversation</span>
+                            <h1 className="text-4xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white mb-8">
+                                We are here to <br /><span className="text-primary">Support Your Recovery</span>
                             </h1>
-                            <p className="text-lg md:text-2xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-4xl mx-auto font-medium italic border-l-4 border-primary/30 pl-8 text-left md:text-center">
-                                "Recovery is an institutional priority. Whether you are seeking immediate admission or clinical information, our specialized medical intake team is ready to guide you."
+                            <p className="text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-3xl mx-auto font-medium">
+                                Direct connection to our medical intake specialists and clinical therapists.
+                                Confidentiality and compassionate care are at the core of our communication.
                             </p>
                         </div>
                     </div>
-                    {/* Background Sanctuary Gradients */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 w-full h-[600px] bg-gradient-to-b from-primary/5 to-transparent blur-[120px] opacity-60"></div>
+                    {/* Background Detail */}
+                    <div className="absolute top-0 left-1/2 -translate-x-1/2 -z-10 w-full h-[600px] bg-gradient-to-b from-primary/5 to-transparent blur-3xl opacity-50"></div>
                 </section>
 
-                {/* Priority Contact Grid */}
-                <section className="px-6 md:px-20 pb-24 -mt-10 relative z-20">
+                {/* Direct Contact Grid - More Professional Integration */}
+                <section className="px-6 md:px-20 pb-24">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid lg:grid-cols-3 gap-8">
-                            {/* Crisis Intervention Card */}
-                            <div className="p-10 rounded-[3rem] bg-slate-900 dark:bg-slate-800 text-white shadow-2xl shadow-primary/20 hover:scale-[1.02] transition-all group">
-                                <h4 className="text-xs font-black uppercase tracking-[0.4em] text-primary mb-10">Emergency 24/7</h4>
-                                <div className="space-y-10">
-                                    <div className="flex flex-col gap-4">
-                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest leading-none">Primary helpline</p>
-                                        <a href="tel:+919804188668" className="text-3xl font-black hover:text-primary transition-colors">+91 98041 88668</a>
+                            {/* Contact Methods Stack */}
+                            <div className="lg:col-span-1 flex flex-col gap-6">
+                                <div className="p-8 rounded-[2rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-xl shadow-slate-200/50 dark:shadow-none hover:translate-y-[-5px] transition-all">
+                                    <h4 className="text-xs font-black uppercase tracking-[0.3em] text-primary mb-6">Helplines</h4>
+                                    <div className="space-y-6">
+                                        <div className="flex items-center gap-4 group">
+                                            <div className="h-12 w-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0 group-hover:bg-primary group-hover:text-white transition-colors">
+                                                <span className="material-symbols-outlined font-bold">call</span>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-black uppercase text-slate-400">Primary Admission</p>
+                                                <p className="text-lg font-black text-slate-900 dark:text-white">+91 98041 88668</p>
+                                            </div>
+                                        </div>
+                                        <div className="flex items-center gap-4 group">
+                                            <div className="h-12 w-12 rounded-xl bg-secondary/10 text-secondary flex items-center justify-center shrink-0 group-hover:bg-secondary group-hover:text-white transition-colors">
+                                                <span className="material-symbols-outlined font-bold">add_call</span>
+                                            </div>
+                                            <div>
+                                                <p className="text-[10px] font-black uppercase text-slate-400">Clinical Support</p>
+                                                <p className="text-lg font-black text-slate-900 dark:text-white">+91 96351 33668</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="flex flex-col gap-4">
-                                        <p className="text-[10px] font-black uppercase text-slate-500 tracking-widest leading-none">Clinical desk</p>
-                                        <a href="tel:+919635133668" className="text-xl font-black text-slate-300 hover:text-primary transition-colors">+91 96351 33668</a>
-                                    </div>
+                                    <button className="mt-8 w-full py-4 bg-slate-900 dark:bg-primary text-white font-bold rounded-xl hover:bg-primary dark:hover:bg-primary/90 transition-all text-sm uppercase tracking-widest">
+                                        Immediate Callback
+                                    </button>
                                 </div>
-                                <div className="mt-12 pt-10 border-t border-white/5 flex items-center gap-4">
-                                    <span className="h-2 w-2 rounded-full bg-red-500 animate-ping"></span>
-                                    <span className="text-[10px] font-black uppercase tracking-widest opacity-60">Active Admission Support</span>
-                                </div>
-                            </div>
 
-                            {/* Digital Connection Card */}
-                            <div className="p-10 rounded-[3rem] bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 shadow-xl hover:translate-y-[-8px] transition-all">
-                                <h4 className="text-xs font-black uppercase tracking-[0.4em] text-slate-400 mb-10">Digital Intake</h4>
-                                <div className="space-y-8">
-                                    <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-primary text-2xl">mail</span>
-                                        <div>
-                                            <p className="font-bold text-slate-900 dark:text-white">support@sudarshanrecovery.org</p>
-                                            <p className="text-xs text-slate-500 mt-1">Medical Records & Inquiries</p>
+                                <div className="p-8 rounded-[2rem] bg-slate-50 dark:bg-slate-900/50 border border-slate-100 dark:border-slate-800 shadow-sm">
+                                    <h4 className="text-xs font-black uppercase tracking-[0.3em] text-slate-400 mb-6">Office Hours</h4>
+                                    <div className="space-y-4">
+                                        <div className="flex justify-between items-center text-sm font-medium">
+                                            <span className="text-slate-500">Emergency</span>
+                                            <span className="px-3 py-1 rounded-full bg-red-100 text-red-600 text-[10px] font-black uppercase tracking-widest">24/7 Service</span>
                                         </div>
-                                    </div>
-                                    <div className="flex items-start gap-4">
-                                        <span className="material-symbols-outlined text-slate-300 text-2xl">official_government_building</span>
-                                        <div>
-                                            <p className="font-bold text-slate-900 dark:text-white">Kharagpur, WB</p>
-                                            <p className="text-xs text-slate-500 mt-1">Main Clinical Campus</p>
+                                        <div className="flex justify-between items-center text-sm font-medium">
+                                            <span className="text-slate-500">Admin Desk</span>
+                                            <span className="text-slate-900 dark:text-slate-300">10 AM - 6 PM</span>
                                         </div>
-                                    </div>
-                                </div>
-                                <div className="mt-12">
-                                    <div className="text-[10px] font-black uppercase text-slate-400 mb-4 tracking-widest">Office Hours</div>
-                                    <div className="flex justify-between text-sm py-2 border-b border-slate-50 dark:border-slate-800">
-                                        <span className="text-slate-500">Admin</span>
-                                        <span className="font-bold text-slate-900 dark:text-white">10 AM - 6 PM</span>
-                                    </div>
-                                    <div className="flex justify-between text-sm py-2">
-                                        <span className="text-slate-500">Facility</span>
-                                        <span className="font-bold text-primary italic lowercase">24/7 access</span>
+                                        <div className="flex justify-between items-center text-sm font-medium">
+                                            <span className="text-slate-500">Visiting</span>
+                                            <span className="text-slate-900 dark:text-slate-300">By Appointment</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
 
-                            {/* Message Panel Area */}
-                            <div className="p-10 md:p-12 rounded-[3rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-2xl">
+                            {/* Message Form Area */}
+                            <div className="lg:col-span-2 p-8 md:p-12 rounded-[2.5rem] bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-2xl shadow-slate-200/50 dark:shadow-none">
                                 <div className="mb-10">
-                                    <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-4 tracking-tighter uppercase italic">Secure Messenger</h2>
-                                    <p className="text-slate-500 dark:text-slate-400 font-medium text-xs leading-relaxed">
-                                        All submissions reach our clinical oversight committee directly.
+                                    <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-4 tracking-tight leading-tight">Send a Confidential Inquiry</h2>
+                                    <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                                        Our response team reviews every message within <span className="text-primary font-bold">2 business hours</span>.
+                                        Your medical data and personal information are strictly encrypted.
                                     </p>
                                 </div>
                                 <ContactForm />
@@ -102,32 +95,43 @@ export default function ContactPage() {
                     </div>
                 </section>
 
-                {/* Response Protocol - New High-Fidelity Section */}
-                <section className="bg-slate-900 py-32 relative overflow-hidden">
-                    <div className="mx-auto max-w-7xl px-6 md:px-20 relative z-10">
-                        <div className="grid lg:grid-cols-2 gap-20 items-center">
-                            <div>
-                                <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter uppercase mb-6 italic">The Response <span className="text-primary">Protocol</span></h2>
-                                <p className="text-slate-400 text-lg mb-12 max-w-md italic">What happens after you reach out? We ensure a systematic, medical approach to every inquiry.</p>
-                                <div className="space-y-4">
-                                    {protocols.map((step, idx) => (
-                                        <div key={idx} className="flex gap-6 p-6 rounded-2xl bg-white/5 border border-white/5 hover:bg-white/10 transition-all group">
-                                            <div className="h-12 w-12 rounded-xl bg-primary/20 text-primary flex items-center justify-center shrink-0">
-                                                <span className="material-symbols-outlined font-bold text-2xl">{step.icon}</span>
-                                            </div>
-                                            <div>
-                                                <h5 className="font-black text-white italic tracking-tighter uppercase text-sm mb-1">{step.title}</h5>
-                                                <p className="text-xs text-slate-500 font-medium leading-relaxed">{step.desc}</p>
-                                            </div>
+                {/* Geographical Integration */}
+                <section className="bg-slate-50 dark:bg-slate-900/30 px-6 md:px-20 py-24 border-y border-slate-200/50 dark:border-slate-800">
+                    <div className="mx-auto max-w-7xl">
+                        <div className="grid lg:grid-cols-12 gap-16 items-center">
+                            <div className="lg:col-span-5">
+                                <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 tracking-tight">Visit Our Clinical <br /><span className="text-primary">Facility</span></h2>
+                                <div className="space-y-10">
+                                    <div className="flex gap-6">
+                                        <div className="h-14 w-14 rounded-2xl bg-primary text-white flex items-center justify-center shrink-0 shadow-lg shadow-primary/20">
+                                            <span className="material-symbols-outlined text-3xl font-bold">clinical_notes</span>
                                         </div>
-                                    ))}
+                                        <div>
+                                            <h5 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Registered Address</h5>
+                                            <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">
+                                                Sudarshan Building, Malancha Road,<br />
+                                                Near Inda Overbridge, Kharagpur,<br />
+                                                Paschim Medinipur, WB - 721301
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div className="flex gap-6">
+                                        <div className="h-14 w-14 rounded-2xl bg-secondary text-white flex items-center justify-center shrink-0 shadow-lg shadow-secondary/20">
+                                            <span className="material-symbols-outlined text-3xl font-bold">mail</span>
+                                        </div>
+                                        <div>
+                                            <h5 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Digital Connection</h5>
+                                            <p className="text-slate-600 dark:text-slate-400 font-medium">support@sudarshanrecovery.org</p>
+                                            <p className="text-slate-600 dark:text-slate-400 font-medium">official.sudarshan@gmail.com</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="relative">
-                                <div className="aspect-square rounded-[4rem] overflow-hidden border-[16px] border-white/5 rotate-2">
+                            <div className="lg:col-span-7">
+                                <div className="relative w-full h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border-[12px] border-white dark:border-slate-800 rotate-1">
                                     <iframe
                                         allowFullScreen={true}
-                                        className="absolute inset-0 w-full h-full grayscale hover:grayscale-0 transition-all duration-1000"
+                                        className="absolute inset-0 w-full h-full grayscale-[0.3] contrast-[1.1] hover:grayscale-0 transition-all duration-700"
                                         loading="lazy"
                                         referrerPolicy="no-referrer-when-downgrade"
                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d117911.39673977505!2d87.21855608226012!3d22.335359144805743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d409cfa16bb21%3A0x672013d90932fd37!2sKharagpur%2C%20West%20Bengal!5e0!3m2!1sen!2sin!4v1711234567890!5m2!1sen!2sin"
@@ -140,23 +144,23 @@ export default function ContactPage() {
                     </div>
                 </section>
 
-                {/* Clinical Credentials Bar */}
-                <section className="px-6 md:px-20 py-24 bg-white dark:bg-background-dark">
+                {/* Verification Bar - Professional Layout */}
+                <section className="px-6 md:px-20 py-16 bg-white dark:bg-background-dark">
                     <div className="mx-auto max-w-7xl">
-                        <div className="flex flex-col md:flex-row justify-between items-center gap-12 p-12 rounded-[3.5rem] bg-slate-50 dark:bg-slate-900 border border-slate-100 dark:border-slate-800">
+                        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
                             {[
                                 { label: "ISO Certified Facility", val: "9001:2015", icon: "verified" },
                                 { label: "NITI Aayog (Darpan)", val: "WB/2021/0285432", icon: "account_balance" },
-                                { label: "Registered NGO No.", val: "S0017424", icon: "gavel" },
+                                { label: "Registered NGO No.", val: "S0017424 of 2020", icon: "gavel" },
                                 { label: "Clinical Establishment", val: "WB/CE/22/01/223", icon: "medical_information" }
                             ].map((item, idx) => (
-                                <div key={idx} className="flex items-center gap-4 group">
-                                    <div className="h-10 w-10 rounded-lg bg-primary/5 text-primary flex items-center justify-center shrink-0 group-hover:scale-110 transition-all">
-                                        <span className="material-symbols-outlined text-xl font-black">{item.icon}</span>
+                                <div key={idx} className="flex items-center gap-4 p-6 rounded-2xl bg-white dark:bg-slate-800 border border-slate-100 dark:border-slate-700 shadow-sm group">
+                                    <div className="h-10 w-10 rounded-lg bg-primary/5 text-primary flex items-center justify-center group-hover:scale-110 transition-transform">
+                                        <span className="material-symbols-outlined text-2xl font-black">{item.icon}</span>
                                     </div>
-                                    <div className="flex flex-col">
-                                        <span className="text-[9px] font-black uppercase text-slate-400 tracking-wider leading-none mb-1">{item.label}</span>
-                                        <span className="text-xs font-black text-slate-900 dark:text-white uppercase italic">{item.val}</span>
+                                    <div>
+                                        <p className="text-[10px] font-black uppercase tracking-widest text-slate-400 mb-0.5">{item.label}</p>
+                                        <p className="text-xs font-black text-slate-900 dark:text-white">{item.val}</p>
                                     </div>
                                 </div>
                             ))}
