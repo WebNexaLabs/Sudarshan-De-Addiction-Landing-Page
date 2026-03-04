@@ -60,7 +60,7 @@ export default function Footer() {
                     <p className="text-xs">© 2024 Sudarshan De-Addiction and Research Center. All rights reserved.</p>
                     <div className="flex gap-8 text-xs font-medium uppercase tracking-widest">
                         <Link className="hover:text-white transition-colors" href="/privacy">Privacy Policy</Link>
-                        <Link className="hover:text-white transition-colors" href="#">Terms of Service</Link>
+                        <Link className="hover:text-white transition-colors" href="/terms">Terms of Service</Link>
                     </div>
                 </div>
             </div>
