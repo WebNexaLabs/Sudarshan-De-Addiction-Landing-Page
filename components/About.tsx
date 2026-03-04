@@ -6,7 +6,7 @@ export default function About() {
             <div className="mx-auto max-w-4xl">
                 <div className="relative overflow-hidden rounded-[2.5rem] bg-primary/5 p-8 md:p-14 border border-primary/10 shadow-sm animate-fade-in">
                     <div className="flex flex-col md:flex-row items-center gap-12">
-                        <div className="h-56 w-56 shrink-0 overflow-hidden rounded-3xl shadow-2xl rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-slate-800">
+                        <div className="h-56 w-56 shrink-0 overflow-hidden rounded-3xl shadow-2xl md:rotate-3 hover:rotate-0 transition-transform duration-500 border-4 border-white dark:border-slate-800">
                             <img
                                 alt="S. Sanjay Rao, Director"
                                 className="h-full w-full object-cover"
