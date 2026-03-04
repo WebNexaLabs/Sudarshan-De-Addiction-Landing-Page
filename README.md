@@ -1,36 +1,38 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌟 Sudarshan De-Addiction and Research Center
 
-## Getting Started
+### *Evidence-Based Recovery for a Brighter Tomorrow*
 
-First, run the development server:
+Sudarshan De-Addiction and Research Center is a premier, ISO-certified facility dedicated to providing compassionate, professional support for individuals seeking sustainable sobriety. Located in Kharagpur, we combine medical expertise with holistic healing to transform lives.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🏛️ About Our Center
+At Sudarshan, we believe recovery is a journey, not a destination. Our state-of-the-art facility is designed to provide a safe, nurturing environment where patients can focus entirely on their healing process. We are committed to maintaining the highest standards of care, backed by national and international certifications.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ✨ Key Features
+- **Professional Medical Care:** 24/7 support from experienced healthcare professionals.
+- **Holistic Approach:** Integrating therapy, meditation, and nutritional support.
+- **Modern Facility:** A clean, safe, and comfortable environment for recovery.
+- **Individualized Programs:** Tailored treatment plans to meet unique patient needs.
+- **Confidential Support:** We prioritize your privacy and dignity throughout the recovery process.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🎖️ Trusted & Certified
+We take pride in our service excellence and regulatory compliance:
+- ✅ **ISO 9001:2015 Certified**
+- ✅ **Verified by NITI Aayog**
+- ✅ **Registered with WB Govt.**
+- ✅ **UNODC Standards Compliant**
 
-## Learn More
+## 🗺️ Visit Us
+**Sudarshan De-Addiction and Research Center**  
+Kharagpur, West Bengal, India  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🔒 License
+**© 2026 Sudarshan De-Addiction and Research Center. All rights reserved.**
 
-## Deploy on Vercel
+This project is private and proprietary. Unauthorized copying, distribution, or use of this codebase is strictly prohibited.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
