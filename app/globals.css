@@ -23,6 +23,12 @@
     --foreground: #f8fafc;
   }
 
+  html,
+  body {
+    @apply overflow-x-hidden w-full;
+    max-width: 100vw;
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
@@ -34,14 +40,32 @@
     -webkit-font-smoothing: antialiased;
   }
 
-  /* Global Clinical Typography Sweep */
-  h1,
-  h2,
+  /* Global Clinical Typography Sweep + Fluid Typography */
+  h1 {
+    @apply font-black tracking-tighter;
+    font-size: clamp(2.25rem, 8vw, 4.5rem);
+    line-height: 1.1;
+  }
+
+  h2 {
+    @apply font-black tracking-tighter;
+    font-size: clamp(1.875rem, 5vw, 3.75rem);
+    line-height: 1.2;
+  }
+
   h3,
   h4,
   h5,
   h6 {
     @apply tracking-tighter font-black;
+  }
+
+  /* One-handed touch-target refinement */
+  button,
+  a {
+    @apply active:scale-95 transition-transform duration-200;
+    min-height: 44px;
+    touch-action: manipulation;
   }
 }
 
@@ -55,6 +79,15 @@
   word-wrap: normal;
   white-space: nowrap;
   direction: ltr;
+}
+
+.fill-1 {
+  font-variation-settings: 'FILL' 1;
+}
+
+/* Safe Area Insets for Mobile App-like UI */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom);
 }
 
 @keyframes fade-in {
@@ -71,4 +104,10 @@
 
 .animate-fade-in {
   animation: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Utility to prevent scroll leak */
+.no-scroll {
+  overflow: hidden;
+  height: 100vh;
 }
