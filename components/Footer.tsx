@@ -17,13 +17,13 @@ export default function Footer() {
                         </p>
                         <div className="flex gap-4">
                             {[
-                                { icon: "social_leaderboard", label: "LinkedIn" },
-                                { icon: "mail", label: "Email Support" },
-                                { icon: "call", label: "Call Center" }
+                                { icon: "verified", label: "Certificates/Team", href: "/about#team" },
+                                { icon: "mail", label: "Email Support", href: "mailto:support@sudarshanrecovery.org" },
+                                { icon: "call", label: "Call Center", href: "tel:+919804188668" },
                             ].map((social, idx) => (
                                 <a
                                     key={idx}
-                                    href="#"
+                                    href={social.href}
                                     aria-label={social.label}
                                     className="h-10 w-10 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
                                 >
@@ -33,24 +33,26 @@ export default function Footer() {
                         </div>
                     </div>
 
-                    <div className="text-center md:text-left">
-                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Clinical Services</h6>
-                        <ul className="flex flex-col gap-5 text-sm font-medium">
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments#clinical">Alcohol De-addiction</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments#clinical">Drug Rehabilitation</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments#clinical">Dual Diagnosis</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/gallery">Gallery & Facility</Link></li>
-                        </ul>
-                    </div>
-
-                    <div className="text-center md:text-left">
-                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Organization</h6>
-                        <ul className="flex flex-col gap-5 text-sm font-medium">
-                            <li><Link className="hover:text-primary transition-colors" href="/about#philosophy">Our Philosophy</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/vision">Our Vision</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/about#team">Medical Team</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/contact">Contact Support</Link></li>
-                        </ul>
+                    <div className="text-center md:text-left lg:col-span-2">
+                        <div className="grid grid-cols-2 gap-8">
+                            <div>
+                                <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Navigation</h6>
+                                <ul className="flex flex-col gap-5 text-sm font-medium">
+                                    <li><Link className="hover:text-primary transition-colors" href="/treatments">Our Programs</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors" href="/admission">Admission</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors" href="/gallery">Gallery</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors" href="/contact">Contact</Link></li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Institutional</h6>
+                                <ul className="flex flex-col gap-5 text-sm font-medium">
+                                    <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors" href="/vision">Our Vision</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors" href="/about#team">Medical Team</Link></li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
 
                     <div className="text-center md:text-left">

@@ -23,6 +23,7 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.sudarshanrecovery.org"),
   title: {
     default: "Sudarshan Recovery Center | Leading De-Addiction in West Bengal",
     template: "%s | Sudarshan Recovery Center"
@@ -38,7 +39,7 @@ export const metadata: Metadata = {
     description: "Your safe path to addiction recovery with clinical excellence.",
     siteName: "Sudarshan Recovery Center",
     images: [{
-      url: "/og-image.jpg",
+      url: "/og-image.png",
       width: 1200,
       height: 630,
       alt: "Sudarshan Recovery Center Clinical Facility"
