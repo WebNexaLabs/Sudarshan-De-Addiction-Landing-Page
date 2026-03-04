@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Treatments from "@/components/Treatments";
@@ -16,15 +17,15 @@ export default function Home() {
         {/* Unified Trust Section - Optimized for mobile scroll */}
         <section className="px-6 md:px-20 py-12 lg:py-16 bg-slate-50 dark:bg-background-dark/30 border-y border-slate-100 dark:border-slate-800">
           <div className="mx-auto max-w-7xl">
-            <div className="flex overflow-x-auto lg:overflow-visible pb-4 lg:pb-0 gap-8 lg:justify-between items-center no-scrollbar">
+            <div className="grid grid-cols-2 lg:flex lg:justify-between items-center gap-y-8 gap-x-12 lg:gap-8">
               {[
                 { label: "ISO Certified", val: "9001:2015", icon: "verified" },
                 { label: "NITI Aayog", val: "Verified", icon: "account_balance" },
                 { label: "Registered NGO", val: "S0017424", icon: "gavel" },
                 { label: "UNODC Standard", val: "Compliant", icon: "clinical_notes" }
               ].map((badge, idx) => (
-                <div key={idx} className="flex items-center gap-3 shrink-0 lg:shrink">
-                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center">
+                <div key={idx} className="flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
                     <span className="material-symbols-outlined text-xl font-bold">{badge.icon}</span>
                   </div>
                   <div className="flex flex-col">
@@ -49,12 +50,12 @@ export default function Home() {
               Take the First Step <br className="hidden md:block" /><span className="text-primary italic">Towards A Better Life</span>
             </h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4 lg:gap-6">
-              <button className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-xs hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/30 active:translate-y-0 transition-all">
+              <Link href="/contact" className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-xs hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/30 active:translate-y-0 transition-all text-center">
                 Get Confidential Help
-              </button>
-              <button className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black uppercase tracking-widest text-xs hover:translate-y-[-4px] hover:shadow-2xl active:translate-y-0 transition-all">
+              </Link>
+              <Link href="/gallery" className="w-full sm:w-auto px-10 py-5 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black uppercase tracking-widest text-xs hover:translate-y-[-4px] hover:shadow-2xl active:translate-y-0 transition-all text-center">
                 View Facility Gallery
-              </button>
+              </Link>
             </div>
           </div>
         </section>

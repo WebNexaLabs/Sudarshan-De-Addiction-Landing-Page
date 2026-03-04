@@ -31,8 +31,18 @@ Kharagpur, West Bengal, India
 
 ---
 
+---
+
+---
+
 ## 🔒 License
-**© 2026 Sudarshan De-Addiction and Research Center. All rights reserved.**
+**© 2026 Sudarshan De-Addiction and Research Center.**  
+*Official Facility*
 
 This project is private and proprietary. Unauthorized copying, distribution, or use of this codebase is strictly prohibited.
+
+---
+*Designed with ❤️ by [**WebNexaLabs**](https://webnexlabs.dev)*
+
+
 

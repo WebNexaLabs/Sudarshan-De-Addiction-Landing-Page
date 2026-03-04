@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -74,8 +75,8 @@ export default function GalleryPage() {
                                     <button
                                         key={cat}
                                         className={`shrink-0 px-6 py-2.5 rounded-full text-[10px] font-black uppercase tracking-widest transition-all ${cat === "All"
-                                                ? "bg-primary text-white shadow-lg shadow-primary/25"
-                                                : "bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700"
+                                            ? "bg-primary text-white shadow-lg shadow-primary/25"
+                                            : "bg-slate-100 dark:bg-slate-800 text-slate-500 hover:bg-slate-200 dark:hover:bg-slate-700"
                                             }`}
                                     >
                                         {cat}
@@ -126,12 +127,12 @@ export default function GalleryPage() {
                                     We encourage families to schedule a confidential physical tour of our facility to witness the standards of clinical excellence first-hand.
                                 </p>
                                 <div className="w-full flex flex-col sm:flex-row justify-center gap-4 lg:gap-6">
-                                    <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white text-primary font-black uppercase tracking-widest text-xs hover:bg-slate-50 transition-all hover:scale-105 shadow-xl shadow-black/10">
+                                    <Link href="/contact" className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-white text-primary font-black uppercase tracking-widest text-xs hover:bg-slate-50 transition-all hover:scale-105 shadow-xl shadow-black/10 text-center">
                                         Schedule Tour
-                                    </button>
-                                    <button className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-primary/20 backdrop-blur-md border border-white/30 text-white font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all">
+                                    </Link>
+                                    <Link href="/contact" className="w-full sm:w-auto px-8 py-4 rounded-2xl bg-primary/20 backdrop-blur-md border border-white/30 text-white font-black uppercase tracking-widest text-xs hover:bg-white/10 transition-all text-center">
                                         Contact Intake
-                                    </button>
+                                    </Link>
                                 </div>
                             </div>
                             <div className="absolute -top-20 -right-20 h-60 w-60 lg:h-80 lg:w-80 bg-white/10 rounded-full blur-3xl"></div>

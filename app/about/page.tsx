@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -7,7 +8,8 @@ export default function AboutPage() {
         { title: "Mental Mapping", desc: "Structured therapy programs addressing neuro-behavioral needs.", icon: "psychology" },
         { title: "Relapse Control", desc: "Advanced aftercare and long-term sobriety protocols.", icon: "verified" },
         { title: "Clinical Research", desc: "Evidence-based community awareness and health research.", icon: "biotech" },
-        { title: "Family Support", desc: "Structured family guidance and systematic clinical counseling.", icon: "groups" }
+        { title: "Family Support", desc: "Structured family guidance and systematic clinical counseling.", icon: "groups" },
+        { title: "Holistic Healing", desc: "Integrating yoga, meditation, and mindfulness for complete recovery.", icon: "self_improvement" }
     ];
 
     const coreTeam = [
@@ -46,7 +48,7 @@ export default function AboutPage() {
                                     </p>
                                 </div>
                                 <div className="p-8 rounded-[2.5rem] bg-slate-50 dark:bg-slate-800/50 border border-slate-100 dark:border-slate-800 flex items-center gap-8">
-                                    <img src="https://unodc.org/favicon.ico" className="h-10 grayscale opacity-50" alt="UNODC" onerror="this.style.display='none'" />
+                                    <img src="https://unodc.org/favicon.ico" className="h-10 grayscale opacity-50" alt="UNODC" />
                                     <p className="text-sm font-bold text-slate-600 dark:text-slate-400">
                                         Following international ethical guidelines provided by <span className="text-primary font-black uppercase tracking-tighter">The Colombo Plan</span> in collaboration with <span className="text-slate-900 dark:text-white font-black">UNODC</span>.
                                     </p>
@@ -82,7 +84,7 @@ export default function AboutPage() {
                 </section>
 
                 {/* Our Mission Pillars */}
-                <section className="px-6 md:px-20 py-32 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
+                <section id="philosophy" className="px-6 md:px-20 py-32 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
                     <div className="mx-auto max-w-7xl text-center mb-20">
                         <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white leading-tight">The Pillars of <br /><span className="text-primary italic">Our Mission</span></h2>
                     </div>
@@ -102,7 +104,7 @@ export default function AboutPage() {
                 </section>
 
                 {/* Core Oversight Committee */}
-                <section className="px-6 md:px-20 py-32 bg-white dark:bg-background-dark">
+                <section id="team" className="px-6 md:px-20 py-32 bg-white dark:bg-background-dark">
                     <div className="mx-auto max-w-7xl">
                         <div className="text-center mb-20">
                             <h2 className="text-4xl md:text-5xl font-black tracking-tighter text-slate-900 dark:text-white mb-6 uppercase">Our Core Team</h2>
@@ -127,16 +129,17 @@ export default function AboutPage() {
                 {/* Final Commitment Seal */}
                 <section className="px-6 md:px-20 py-32 bg-slate-50 dark:bg-background-dark/30">
                     <div className="mx-auto max-w-4xl text-center">
-                        <div className="inline-block h-24 w-24 rounded-full border-4 border-primary/20 flex items-center justify-center text-primary mb-12 opacity-50">
-                            <svg className="h-10 w-10 fill-current" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z" /></svg>
+                        <div className="inline-flex h-24 w-24 rounded-full bg-primary/5 border-4 border-primary/20 items-center justify-center text-primary mb-12 relative">
+                            <span className="material-symbols-outlined text-5xl font-bold">verified_user</span>
+                            <div className="absolute inset-0 rounded-full bg-primary/10 blur-xl scale-110 -z-10 animate-pulse"></div>
                         </div>
                         <h2 className="text-3xl md:text-5xl font-black text-slate-900 dark:text-white tracking-tighter mb-10">Our Commitment</h2>
                         <p className="text-lg md:text-2xl font-medium leading-relaxed italic text-slate-600 dark:text-slate-400 mb-12">
                             "At Sudarshan Research Center, we believe that recovery is more than clinical—it's possible. Our center remains committed to creating the supportive environment where transformation begins."
                         </p>
-                        <button className="px-12 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-sm shadow-2xl shadow-primary/20 hover:scale-105 transition-all active:scale-95">
+                        <Link href="/contact" className="inline-block px-12 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-sm shadow-2xl shadow-primary/20 hover:scale-105 transition-all active:scale-95 text-center">
                             Connect with our team
-                        </button>
+                        </Link>
                     </div>
                 </section>
             </main>

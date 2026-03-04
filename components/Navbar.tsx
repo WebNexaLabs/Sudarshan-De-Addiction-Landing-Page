@@ -48,12 +48,13 @@ export default function Navbar() {
                     >
                         Call Now
                     </a>
-                    <button
+                    <a
+                        href="tel:+919804188668"
                         aria-label="Get emergency psychiatric help"
-                        className="hidden sm:flex items-center justify-center rounded-xl bg-red-600 px-5 py-2.5 text-sm font-black text-white shadow-xl shadow-red-600/20 transition-all hover:bg-red-700 hover:scale-105 active:scale-95"
+                        className="hidden sm:flex items-center justify-center rounded-xl bg-red-600 px-5 py-2.5 text-sm font-black text-white shadow-xl shadow-red-600/20 transition-all hover:bg-red-700 hover:scale-105 active:scale-95 text-center"
                     >
                         Emergency
-                    </button>
+                    </a>
                 </div>
             </div>
         </header>

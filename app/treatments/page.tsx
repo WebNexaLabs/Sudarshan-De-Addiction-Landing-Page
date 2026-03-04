@@ -29,7 +29,7 @@ export default function TreatmentsPage() {
                 <Treatments />
 
                 {/* Multidisciplinary Approach Section - Stacked on Mobile */}
-                <section className="px-6 md:px-20 py-24 lg:py-32 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
+                <section id="clinical" className="px-6 md:px-20 py-24 lg:py-32 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20 items-center">
                             <div>

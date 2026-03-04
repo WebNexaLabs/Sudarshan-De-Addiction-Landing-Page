@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Admission() {
     const steps = [
         {
@@ -24,10 +26,10 @@ export default function Admission() {
                     <div className="lg:w-1/3">
                         <h2 className="text-3xl md:text-5xl font-black mb-6 text-slate-900 dark:text-white leading-tight">Your Path to Healing</h2>
                         <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">Starting recovery is a brave choice. We've made our admission process as simple and supportive as possible.</p>
-                        <button className="flex items-center gap-3 rounded-xl bg-primary px-8 py-4 font-bold text-white shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
+                        <Link href="/contact" className="inline-flex items-center gap-3 rounded-xl bg-primary px-8 py-4 font-bold text-white shadow-xl shadow-primary/20 hover:translate-y-[-2px] transition-all">
                             <span className="material-symbols-outlined">description</span>
                             Request Info Pack
-                        </button>
+                        </Link>
                     </div>
                     <div className="flex-1 grid gap-8">
                         {steps.map((step) => (

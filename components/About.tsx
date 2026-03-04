@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function About() {
     return (
         <section id="about" className="bg-white dark:bg-background-dark/50 px-6 md:px-20 py-24 border-y border-slate-100 dark:border-slate-800">
@@ -20,10 +22,13 @@ export default function About() {
                                 <h4 className="text-xl font-bold text-slate-900 dark:text-white">S. Sanjay Rao</h4>
                                 <p className="text-sm font-black text-primary uppercase tracking-[0.2em] mt-1">Executive Director & Clinical Lead</p>
                             </div>
-                            <button className="mt-4 flex items-center justify-center md:justify-start gap-2 text-sm font-bold text-primary group">
+                            <Link
+                                href="/vision"
+                                className="mt-4 flex items-center justify-center md:justify-start gap-2 text-sm font-bold text-primary group cursor-pointer"
+                            >
                                 Read Full Vision
                                 <span className="material-symbols-outlined text-sm transition-transform group-hover:translate-x-1 font-bold">arrow_forward</span>
-                            </button>
+                            </Link>
                         </div>
                     </div>
 

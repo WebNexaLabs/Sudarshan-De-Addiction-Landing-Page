@@ -1,9 +1,11 @@
+import Link from "next/link";
+
 export default function Hero() {
     return (
         <section className="relative bg-white dark:bg-background-dark px-6 md:px-20 py-20 lg:py-32 overflow-hidden">
             <div className="mx-auto max-w-7xl">
                 <div className="grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
-                    <div className="text-center lg:text-left order-2 lg:order-1">
+                    <div className="text-center lg:text-left order-1 lg:order-1">
                         <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-primary mb-8 animate-fade-in shadow-sm">
                             <span className="material-symbols-outlined text-sm font-bold">verified</span>
                             <span className="text-[10px] md:text-xs font-black uppercase tracking-widest italic">ISO 9001:2015 Certified Facility</span>
@@ -16,12 +18,12 @@ export default function Hero() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mb-12">
-                            <button className="w-full sm:w-auto px-10 py-5 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-2xl shadow-primary/25 hover:translate-y-[-4px] active:translate-y-0 transition-all">
+                            <Link href="/admission" className="w-full sm:w-auto px-10 py-5 bg-primary text-white font-black uppercase tracking-widest text-sm rounded-2xl shadow-2xl shadow-primary/25 hover:translate-y-[-4px] active:translate-y-0 transition-all text-center">
                                 Start Your Recovery
-                            </button>
-                            <button className="w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-black uppercase tracking-widest text-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all">
+                            </Link>
+                            <Link href="/treatments" className="w-full sm:w-auto px-10 py-5 bg-white dark:bg-slate-800 text-slate-900 dark:text-white font-black uppercase tracking-widest text-sm rounded-2xl border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700 transition-all text-center">
                                 View Our Programs
-                            </button>
+                            </Link>
                         </div>
 
                         {/* Accreditation Badges - Centered on Mobile */}
@@ -44,7 +46,7 @@ export default function Hero() {
                     </div>
 
                     {/* Image Section - Simplified for Mobile to prevent "Tiling/Tilting" issues */}
-                    <div className="relative order-1 lg:order-2 px-4 md:px-0">
+                    <div className="relative order-2 lg:order-2 px-4 md:px-0">
                         <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl md:rotate-3 hover:rotate-0 transition-transform duration-700 border-4 border-white dark:border-slate-800">
                             <img
                                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT9-4jDgdZPxEj_wTF1KXqS4qpn-kBt1l6r_M5ryLZttquoAF0yYYTc03_fm3YdPHpYzBnH0XHiZA-eoxoffeKMfszvmBArpmkdJvuNefeSE_cs-badvXNaYksxVdEpGujaN-_Hj_c3a3bsMOlsa51K0pukvbVcmAQjpMURP8E3fBM6cAfdjx4lPydxby5l2VhlEJABTNjgOdk8rQr4Ll9nXMs92TKaaPNUmCEimwBk0Dut9RdCqbmgaRb_mDhwgP6kCdL9gWMKUez"
