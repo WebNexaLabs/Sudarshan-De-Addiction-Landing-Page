@@ -27,14 +27,6 @@ We take pride in our service excellence and regulatory compliance:
 **Sudarshan De-Addiction and Research Center**  
 Kharagpur, West Bengal, India  
 
----
-
----
-
----
-
----
-
 ## 🔒 License
 **© 2026 Sudarshan De-Addiction and Research Center.**  
 *Official Facility*
