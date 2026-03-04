@@ -28,8 +28,7 @@ We take pride in our service excellence and regulatory compliance:
 Kharagpur, West Bengal, India  
 
 ## 🔒 License
-**© 2026 Sudarshan De-Addiction and Research Center.**  
-*Official Facility*
+**© 2026 Sudarshan De-Addiction and Research Center.** 
 
 This project is private and proprietary. Unauthorized copying, distribution, or use of this codebase is strictly prohibited.
 
