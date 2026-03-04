@@ -1,53 +1,66 @@
 @import "tailwindcss";
 
-/* 
-  Support both system preference and data-theme toggle.
-  Tailwind 4 'dark:' utilities will now trigger when [data-theme='dark'] is present on root.
-*/
-@variant dark (&:where([data-theme='dark'], [data-theme='dark'] *));
-
 @theme {
   --color-primary: #1392ec;
   --color-secondary: #22c55e;
   --color-background-light: #f6f7f8;
   --color-background-dark: #101a22;
-
-  --font-display: "Public Sans", sans-serif;
-
-  --radius-default: 0.25rem;
-  --radius-lg: 0.5rem;
+  --font-display: "Public Sans", ui-sans-serif, system-ui, sans-serif;
   --radius-xl: 0.75rem;
 }
 
-:root {
-  --background: #f6f7f8;
-  --foreground: #0f172a;
-}
+/* Enable class-based dark mode for Tailwind v4 */
+@variant dark (&:where(.dark, .dark *));
 
-/* Base styles for dark theme */
-[data-theme='dark'] {
-  --background: #101a22;
-  --foreground: #f8fafc;
-}
+@layer base {
+  :root {
+    --background: #f6f7f8;
+    --foreground: #0f172a;
+  }
 
-body {
-  background-color: var(--background);
-  color: var(--foreground);
-  font-family: var(--font-display);
-  transition: background-color 0.3s ease, color 0.3s ease;
-  min-height: 100vh;
+  .dark {
+    --background: #101a22;
+    --foreground: #f8fafc;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    transition: background-color 500ms ease, color 500ms ease;
+    font-family: var(--font-display);
+    min-height: 100vh;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Global Clinical Typography Sweep */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply tracking-tighter font-black;
+  }
 }
 
 /* Material Symbols configuration */
 .material-symbols-outlined {
   font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
 }
 
-/* Custom Animations */
-@keyframes fadeIn {
+@keyframes fade-in {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(10px);
   }
 
   to {
@@ -57,5 +70,5 @@ body {
 }
 
 .animate-fade-in {
-  animation: fadeIn 0.8s ease-out forwards;
+  animation: fade-in 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }

@@ -8,132 +8,74 @@ export default function TreatmentsPage() {
             <Navbar />
             <main className="flex-1">
                 {/* Hero Section */}
-                <section className="relative px-6 md:px-20 py-20 md:py-32 bg-white dark:bg-background-dark overflow-hidden">
-                    <div className="mx-auto max-w-7xl text-center">
-                        <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-primary mb-8 animate-fade-in">
-                            <span className="material-symbols-outlined text-sm">science</span>
-                            <span className="text-xs font-bold uppercase tracking-widest">Research-Driven Clinical Excellence</span>
+                <section className="relative px-6 md:px-20 py-24 bg-white dark:bg-background-dark overflow-hidden">
+                    <div className="mx-auto max-w-7xl">
+                        <div className="flex flex-col items-center text-center gap-10">
+                            <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-1.5 text-primary animate-fade-in">
+                                <span className="material-symbols-outlined text-sm">clinical_notes</span>
+                                <span className="text-xs font-black uppercase tracking-widest italic">Science-Led Recovery</span>
+                            </div>
+                            <h1 className="text-4xl md:text-7xl font-black leading-none tracking-tighter text-slate-900 dark:text-white max-w-4xl">
+                                Tailored <span className="text-primary">Treatment</span> for Every Pathway
+                            </h1>
+                            <p className="text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-400 max-w-3xl font-medium">
+                                Our medical facility implements internationally recognized protocols combining psychiatric intervention, behavioral therapy, and holistic wellness.
+                            </p>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-black leading-[1.1] tracking-tight text-slate-900 dark:text-white mb-8">
-                            Evidence-Based Treatment & <span className="text-primary">Holistic Recovery</span>
-                        </h1>
-                        <p className="mx-auto max-w-3xl text-lg md:text-xl leading-relaxed text-slate-600 dark:text-slate-400">
-                            At Sudarshan, we provide 24/7 medical supervision and specialized therapy tailored to individual needs. Our programs are designed by experts to ensure safe detoxification and sustainable mental wellness.
-                        </p>
                     </div>
-                    {/* Decorative Background */}
-                    <div className="absolute top-0 right-0 -z-10 h-[500px] w-[500px] bg-primary/5 rounded-full blur-[120px] -mr-64 -mt-64"></div>
                 </section>
 
-                {/* Programs Grid (Reusing Component) */}
+                {/* Main Treatments Component */}
                 <Treatments />
 
-                {/* Multidisciplinary Approach */}
-                <section className="bg-white dark:bg-background-dark px-6 md:px-20 py-24 border-y border-slate-100 dark:border-slate-800">
+                {/* Multidisciplinary Approach Section */}
+                <section className="px-6 md:px-20 py-32 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
                     <div className="mx-auto max-w-7xl">
                         <div className="grid lg:grid-cols-2 gap-20 items-center">
                             <div>
-                                <h2 className="text-3xl md:text-5xl font-black tracking-tight text-slate-900 dark:text-white mb-6">Our Multi-Disciplinary Approach</h2>
-                                <div className="h-1.5 w-20 rounded-full bg-primary mb-8"></div>
-                                <p className="text-lg text-slate-600 dark:text-slate-400 mb-10 leading-relaxed font-medium">
-                                    Recovery is a complex puzzle. That's why our team isn't just one doctor—it's a collaborative ecosystem of medical professionals, clinical psychologists, and experienced counselors working in synergy.
-                                </p>
-                                <div className="grid gap-6">
-                                    <div className="flex gap-5 p-6 rounded-2xl bg-primary/5 border border-primary/10 hover:bg-primary/10 transition-colors">
-                                        <div className="h-12 w-12 rounded-xl bg-primary text-white flex items-center justify-center shrink-0">
-                                            <span className="material-symbols-outlined">groups</span>
+                                <h2 className="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-8 tracking-tighter">Multidisciplinary <br /><span className="text-primary italic">Clinical Excellence</span></h2>
+                                <div className="space-y-10">
+                                    {[
+                                        { title: "Psychiatric Care", desc: "Dual-diagnosis support and medication management supervised by MD Psychiatrists.", icon: "psychology" },
+                                        { title: "Cognitive Therapy", desc: "Evidence-based CBT and DBT sessions focused on relapse prevention.", icon: "clinical_notes" },
+                                        { title: "Medical Supervision", desc: "24/7 nursing and emergency medical cover for safe physiological detox.", icon: "emergency" }
+                                    ].map((item, idx) => (
+                                        <div key={idx} className="flex gap-6 group hover:translate-x-2 transition-transform duration-300">
+                                            <div className="h-14 w-14 rounded-2xl bg-white dark:bg-slate-800 shadow-xl flex items-center justify-center text-primary shrink-0 transition-all group-hover:bg-primary group-hover:text-white">
+                                                <span className="material-symbols-outlined text-3xl font-bold">{item.icon}</span>
+                                            </div>
+                                            <div>
+                                                <h5 className="text-xl font-bold text-slate-900 dark:text-white mb-2">{item.title}</h5>
+                                                <p className="text-slate-600 dark:text-slate-400 font-medium leading-relaxed">{item.desc}</p>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <h5 className="font-bold text-slate-900 dark:text-white text-lg">Collaborative Case Reviews</h5>
-                                            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Weekly team meetings to review patient progress from medical and psychological perspectives.</p>
-                                        </div>
-                                    </div>
-                                    <div className="flex gap-5 p-6 rounded-2xl bg-secondary/5 border border-secondary/10 hover:bg-secondary/10 transition-colors">
-                                        <div className="h-12 w-12 rounded-xl bg-secondary text-white flex items-center justify-center shrink-0">
-                                            <span className="material-symbols-outlined">clinical_notes</span>
-                                        </div>
-                                        <div>
-                                            <h5 className="font-bold text-slate-900 dark:text-white text-lg">Integrated Care Delivery</h5>
-                                            <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">Doctors manage physical stability while counselors work on mental triggers simultaneously.</p>
-                                        </div>
-                                    </div>
+                                    ))}
                                 </div>
                             </div>
                             <div className="relative">
-                                <div className="aspect-video overflow-hidden rounded-[3rem] shadow-2xl">
-                                    <img
-                                        alt="Multi-disciplinary medical team"
-                                        className="h-full w-full object-cover"
-                                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT9-4jDgdZPxEj_wTF1KXqS4qpn-kBt1l6r_M5ryLZttquoAF0yYYTc03_fm3YdPHpYzBnH0XHiZA-eoxoffeKMfszvmBArpmkdJvuNefeSE_cs-badvXNaYksxVdEpGujaN-_Hj_c3a3bsMOlsa51K0pukvbVcmAQjpMURP8E3fBM6cAfdjx4lPydxby5l2VhlEJABTNjgOdk8rQr4Ll9nXMs92TKaaPNUmCEimwBk0Dut9RdCqbmgaRb_mDhwgP6kCdL9gWMKUez"
-                                    />
+                                <div className="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 rotate-2">
+                                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?q=80&w=2070" alt="Clinical Environment" className="h-full w-full object-cover" />
                                 </div>
-                                <div className="absolute -bottom-8 -right-8 bg-white dark:bg-slate-800 p-10 rounded-[2rem] shadow-2xl border border-slate-100 dark:border-slate-700 animate-fade-in">
-                                    <p className="text-sm font-black text-primary uppercase tracking-widest mb-2">Patient Focused</p>
-                                    <p className="text-3xl font-black text-slate-900 dark:text-white">1:4 Staff Ratio</p>
+                                <div className="absolute -bottom-10 -left-10 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 max-w-xs animate-bounce">
+                                    <p className="text-sm font-black text-primary uppercase tracking-widest mb-2">Accredited Standard</p>
+                                    <p className="text-lg font-bold text-slate-900 dark:text-white">Complies with WHO & UNODC treatment guidelines.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
 
-                {/* Global Standards Banner */}
-                <section className="bg-primary px-6 md:px-20 py-20 text-white overflow-hidden relative">
-                    <div className="absolute top-0 right-0 opacity-10 scale-150 rotate-12">
-                        <span className="material-symbols-outlined text-[300px]">verified</span>
-                    </div>
-                    <div className="mx-auto max-w-7xl flex flex-col lg:flex-row items-center justify-between gap-16 relative z-10">
-                        <div className="max-w-2xl text-center lg:text-left">
-                            <h2 className="text-3xl md:text-4xl font-black mb-6">Adhering to Global Standards</h2>
-                            <p className="text-xl text-blue-50 opacity-90 leading-relaxed font-medium">
-                                Our facility is ISO 9001:2015 certified and strictly follows the UNODC (United Nations Office on Drugs and Crime) guidelines for ethical treatment and care.
-                            </p>
-                        </div>
-                        <div className="flex flex-wrap justify-center gap-12">
-                            <div className="flex flex-col items-center gap-3">
-                                <div className="h-20 w-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                                    <span className="material-symbols-outlined text-4xl">verified</span>
-                                </div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em]">ISO 9001:2015</span>
+                {/* Clinical CTA */}
+                <section className="px-6 md:px-20 py-24 bg-white dark:bg-background-dark">
+                    <div className="mx-auto max-w-4xl text-center">
+                        <div className="p-12 md:p-20 rounded-[4rem] bg-slate-900 text-white relative overflow-hidden shadow-2xl">
+                            <div className="relative z-10">
+                                <h2 className="text-3xl md:text-5xl font-black mb-8 tracking-tighter">Ready to Begin Healing?</h2>
+                                <p className="text-lg opacity-80 mb-12 max-w-2xl mx-auto font-medium">Connect with an intake specialist for a confidential medical triage and assessment.</p>
+                                <button className="px-12 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-sm hover:scale-105 active:scale-95 transition-all shadow-xl shadow-primary/25">
+                                    Consult a Specialist
+                                </button>
                             </div>
-                            <div className="flex flex-col items-center gap-3">
-                                <div className="h-20 w-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                                    <span className="material-symbols-outlined text-4xl">public</span>
-                                </div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em]">UNODC Protocols</span>
-                            </div>
-                            <div className="flex flex-col items-center gap-3">
-                                <div className="h-20 w-20 rounded-2xl bg-white/10 backdrop-blur-md flex items-center justify-center border border-white/20">
-                                    <span className="material-symbols-outlined text-4xl">gavel</span>
-                                </div>
-                                <span className="text-[10px] font-black uppercase tracking-[0.2em]">WB Govt. Regd.</span>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-                {/* Speak with a Specialist */}
-                <section className="px-6 md:px-20 py-24 bg-background-light dark:bg-background-dark/30">
-                    <div className="mx-auto max-w-5xl rounded-[3.5rem] bg-slate-900 p-12 md:p-24 text-center relative overflow-hidden shadow-2xl">
-                        <div className="absolute top-0 right-0 w-80 h-80 bg-primary/20 rounded-full blur-[100px] -mr-40 -mt-40"></div>
-                        <div className="absolute bottom-0 left-0 w-80 h-80 bg-secondary/10 rounded-full blur-[100px] -ml-40 -mb-40"></div>
-                        <h2 className="text-3xl md:text-6xl font-black text-white mb-8 relative z-10 tracking-tight">Speak with a Specialist</h2>
-                        <p className="text-slate-400 text-lg md:text-xl mb-14 relative z-10 max-w-2xl mx-auto leading-relaxed">
-                            Ready to take the first step? Our medical intake team is available 24/7 for a confidential, no-obligation consultation.
-                        </p>
-                        <div className="flex flex-col md:flex-row items-center justify-center gap-8 relative z-10 font-bold">
-                            <a
-                                className="flex items-center gap-4 bg-primary hover:bg-primary/90 px-10 py-6 rounded-2xl text-white transition-all transform hover:scale-105 shadow-xl shadow-primary/20"
-                                href="tel:+919804188668"
-                            >
-                                <span className="material-symbols-outlined text-3xl">call</span>
-                                <div className="text-left">
-                                    <p className="text-[10px] font-black uppercase tracking-widest opacity-80">24/7 Helpline</p>
-                                    <p className="text-2xl font-black">+91 98041 88668</p>
-                                </div>
-                            </a>
-                            <button className="bg-white text-slate-900 hover:bg-slate-50 px-10 py-7 rounded-2xl transition-all shadow-xl text-lg">
-                                Schedule an Intake
-                            </button>
                         </div>
                     </div>
                 </section>

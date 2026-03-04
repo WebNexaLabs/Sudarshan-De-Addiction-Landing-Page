@@ -1,10 +1,10 @@
-import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import Treatments from "@/components/Treatments";
 import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Admission from "@/components/Admission";
+import Treatments from "@/components/Treatments";
 import Features from "@/components/Features";
+import Admission from "@/components/Admission";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -12,52 +12,49 @@ export default function Home() {
       <Navbar />
       <main className="flex-1">
         <Hero />
+
+        {/* Unified Trust/Accreditation Section */}
+        <section className="px-6 md:px-20 py-16 bg-slate-50 dark:bg-background-dark/50 border-y border-slate-100 dark:border-slate-800">
+          <div className="mx-auto max-w-7xl">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-12 opacity-80 grayscale hover:grayscale-0 transition-all duration-500">
+              {[
+                { label: "ISO Certified Facility", val: "9001:2015", icon: "verified" },
+                { label: "NITI Aayog (Darpan)", val: "WB/2021/0285432", icon: "account_balance" },
+                { label: "Registered NGO No.", val: "S0017424 of 2020", icon: "gavel" },
+                { label: "UNODC Clinical Standards", val: "Compliant", icon: "clinical_notes" }
+              ].map((badge, idx) => (
+                <div key={idx} className="flex items-center gap-4">
+                  <div className="h-10 w-10 rounded-lg bg-primary/10 text-primary flex items-center justify-center">
+                    <span className="material-symbols-outlined text-2xl font-bold">{badge.icon}</span>
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-[10px] font-black uppercase tracking-widest text-slate-400">{badge.label}</span>
+                    <span className="text-xs font-black text-slate-900 dark:text-white">{badge.val}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         <About />
         <Treatments />
         <Features />
         <Admission />
 
-        {/* Accreditations & Trust */}
-        <section className="bg-white dark:bg-background-dark/30 px-6 md:px-20 py-24 border-t border-slate-100 dark:border-slate-800">
-          <div className="mx-auto max-w-7xl">
-            <div className="grid md:grid-cols-2 gap-16 items-center">
-              <div>
-                <h2 className="text-3xl font-black text-slate-900 dark:text-white mb-6 leading-tight">Accredited Excellence in Recovery</h2>
-                <div className="space-y-8 mt-10">
-                  <div className="flex gap-5">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary shadow-sm">
-                      <span className="material-symbols-outlined text-3xl">description</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-slate-900 dark:text-white">Scientific Protocols</h4>
-                      <p className="text-base text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">Our treatment modules are based on international clinical benchmarks and peer-reviewed research.</p>
-                    </div>
-                  </div>
-                  <div className="flex gap-5">
-                    <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-secondary/10 text-secondary shadow-sm">
-                      <span className="material-symbols-outlined text-3xl">verified_user</span>
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-slate-900 dark:text-white">Govt. Certified Facility</h4>
-                      <p className="text-base text-slate-600 dark:text-slate-400 mt-1 leading-relaxed">Officially registered and monitored by the Government of West Bengal and recognized by central bodies.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="grid grid-cols-2 gap-6 p-4">
-                <div className="rounded-[2.5rem] bg-white dark:bg-slate-800 p-10 shadow-xl border border-slate-100 dark:border-slate-700 text-center hover:scale-105 transition-transform">
-                  <p className="text-5xl font-black text-primary mb-3">10+</p>
-                  <p className="text-[12px] font-black uppercase tracking-[0.2em] text-slate-500">Years of Service</p>
-                </div>
-                <div className="rounded-[2.5rem] bg-white dark:bg-slate-800 p-10 shadow-xl border border-slate-100 dark:border-slate-700 text-center hover:scale-105 transition-transform">
-                  <p className="text-5xl font-black text-secondary mb-3">1.2k</p>
-                  <p className="text-[12px] font-black uppercase tracking-[0.2em] text-slate-500">Recovered Lives</p>
-                </div>
-                <div className="rounded-[2.5rem] bg-slate-900 dark:bg-slate-800 p-10 shadow-xl border border-slate-700 text-center col-span-2 hover:scale-[1.02] transition-transform">
-                  <p className="text-5xl font-black text-white mb-3">24/7</p>
-                  <p className="text-[12px] font-black uppercase tracking-[0.2em] text-primary">Medical Monitoring</p>
-                </div>
-              </div>
+        {/* Quick Connect Floating CTA for Home */}
+        <section className="px-6 md:px-20 py-24 bg-white dark:bg-background-dark">
+          <div className="mx-auto max-w-7xl text-center">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tighter text-slate-900 dark:text-white mb-12">
+              Take the First Step <br /><span className="text-primary italic">Towards A Better Life</span>
+            </h2>
+            <div className="flex flex-wrap justify-center gap-6">
+              <button className="px-12 py-5 rounded-2xl bg-primary text-white font-black uppercase tracking-widest text-sm hover:translate-y-[-4px] hover:shadow-2xl hover:shadow-primary/30 active:translate-y-0 transition-all">
+                Get Confidential Help
+              </button>
+              <button className="px-12 py-5 rounded-2xl bg-slate-900 dark:bg-white text-white dark:text-slate-900 font-black uppercase tracking-widest text-sm hover:translate-y-[-4px] hover:shadow-2xl active:translate-y-0 transition-all">
+                View Facility Gallery
+              </button>
             </div>
           </div>
         </section>

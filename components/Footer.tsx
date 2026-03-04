@@ -2,64 +2,83 @@ import Link from "next/link";
 
 export default function Footer() {
     return (
-        <footer className="bg-background-dark text-slate-400 py-16 px-6 md:px-20">
+        <footer className="bg-background-dark text-slate-400 py-20 px-6 md:px-20 border-t border-slate-800/50">
             <div className="mx-auto max-w-7xl">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12 border-b border-slate-800 pb-12">
-                    <div className="flex flex-col gap-6">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16 border-b border-slate-800 pb-16">
+                    <div className="flex flex-col gap-8">
                         <div className="flex items-center gap-3">
-                            <div className="flex h-8 w-8 items-center justify-center rounded bg-primary text-white">
-                                <span className="material-symbols-outlined text-sm">health_and_safety</span>
+                            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white shadow-lg shadow-primary/20">
+                                <span className="material-symbols-outlined">health_and_safety</span>
                             </div>
-                            <h2 className="text-lg font-bold text-white">Sudarshan</h2>
+                            <h2 className="text-xl font-black text-white tracking-tighter">Sudarshan</h2>
                         </div>
-                        <p className="text-sm leading-relaxed">
-                            A leading non-profit medical rehab facility dedicated to restoring lives through evidence-based practices.
+                        <p className="text-sm leading-relaxed font-medium">
+                            Premium medical de-addiction facility dedicated to evidence-based recovery and clinical excellence since 2020.
                         </p>
                         <div className="flex gap-4">
-                            <a className="hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined">social_leaderboard</span></a>
-                            <a className="hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined">mail</span></a>
-                            <a className="hover:text-primary transition-colors" href="#"><span className="material-symbols-outlined">call</span></a>
+                            {[
+                                { icon: "social_leaderboard", label: "LinkedIn" },
+                                { icon: "mail", label: "Email Support" },
+                                { icon: "call", label: "Call Center" }
+                            ].map((social, idx) => (
+                                <a
+                                    key={idx}
+                                    href="#"
+                                    aria-label={social.label}
+                                    className="h-10 w-10 rounded-xl border border-slate-800 flex items-center justify-center hover:bg-primary hover:border-primary hover:text-white transition-all group"
+                                >
+                                    <span className="material-symbols-outlined text-lg">{social.icon}</span>
+                                </a>
+                            ))}
                         </div>
                     </div>
+
                     <div>
-                        <h6 className="text-white font-bold mb-6">Treatments</h6>
-                        <ul className="flex flex-col gap-4 text-sm">
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Alcohol Addiction</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Drug Rehab</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Mental Health</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Aftercare Programs</Link></li>
+                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Clinical Services</h6>
+                        <ul className="flex flex-col gap-5 text-sm font-medium">
+                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Alcohol De-addiction</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Drug Rehabilitation</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" href="/treatments">Dual Diagnosis</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" href="/gallery">Gallery & Facility</Link></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h6 className="text-white font-bold mb-6">Organization</h6>
-                        <ul className="flex flex-col gap-4 text-sm">
-                            <li><Link className="hover:text-primary transition-colors" href="/about">About Us</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="/about">Director's Desk</Link></li>
+                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Organization</h6>
+                        <ul className="flex flex-col gap-5 text-sm font-medium">
+                            <li><Link className="hover:text-primary transition-colors" href="/about">Our Philosophy</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" href="/about">Medical Team</Link></li>
                             <li><Link className="hover:text-primary transition-colors" href="/career">Careers</Link></li>
-                            <li><Link className="hover:text-primary transition-colors" href="#">Research Papers</Link></li>
+                            <li><Link className="hover:text-primary transition-colors" href="/contact">Contact Support</Link></li>
                         </ul>
                     </div>
+
                     <div>
-                        <h6 className="text-white font-bold mb-6">Trust & Compliance</h6>
-                        <div className="flex flex-col gap-3">
-                            <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-xs text-primary">verified</span>
-                                <span className="text-xs">ISO 9001:2015 Registered</span>
+                        <h6 className="text-white font-black uppercase tracking-widest text-xs mb-8">Trust & Compliance</h6>
+                        <div className="flex flex-col gap-5">
+                            <div className="flex items-center gap-3 group">
+                                <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                    <span className="material-symbols-outlined text-xs">verified</span>
+                                </div>
+                                <span className="text-xs font-bold text-slate-300">ISO 9001:2015 Facility</span>
                             </div>
-                            <div className="flex items-center gap-2">
-                                <span className="material-symbols-outlined text-xs text-primary">verified</span>
-                                <span className="text-xs">NITI Aayog (Darpan) ID: WB/2021/0285432</span>
+                            <div className="flex items-center gap-3 group">
+                                <div className="h-8 w-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center shrink-0">
+                                    <span className="material-symbols-outlined text-xs">account_balance</span>
+                                </div>
+                                <span className="text-xs font-bold text-slate-300">NITI Aayog Darpan Verified</span>
                             </div>
-                            <p className="text-[10px] text-slate-500 mt-2 italic leading-tight">
-                                Disclaimer: Sudarshan is a registered NGO. All treatment processes comply with national health guidelines.
+                            <p className="text-[10px] text-slate-500 mt-4 italic leading-relaxed border-l-2 border-slate-800 pl-4">
+                                Registered NGO. Compliance with Ministry of Health & Family Welfare guidelines.
                             </p>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-                    <p className="text-xs">© 2024 Sudarshan De-Addiction and Research Center. All rights reserved.</p>
-                    <div className="flex gap-8 text-xs font-medium uppercase tracking-widest">
-                        <Link className="hover:text-white transition-colors" href="/privacy">Privacy Policy</Link>
+
+                <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+                    <p className="text-xs font-medium">© {new Date().getFullYear()} Sudarshan De-Addiction and Research Center.</p>
+                    <div className="flex gap-10 text-[10px] font-black uppercase tracking-[0.2em]">
+                        <Link className="hover:text-white transition-colors" href="/privacy">Privacy Protocol</Link>
                         <Link className="hover:text-white transition-colors" href="/terms">Terms of Service</Link>
                     </div>
                 </div>

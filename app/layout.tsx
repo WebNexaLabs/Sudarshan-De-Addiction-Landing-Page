@@ -10,8 +10,27 @@ const publicSans = Public_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Sudarshan De-Addiction and Research Center",
-  description: "A leading non-profit medical rehab facility dedicated to restoring lives through evidence-based practices.",
+  title: {
+    default: "Sudarshan Recovery Center | Leading De-Addiction in West Bengal",
+    template: "%s | Sudarshan Recovery Center"
+  },
+  description: "Evidence-based de-addiction and residential recovery programs in Kharagpur, West Bengal. ISO 9001:2015 Certified facility with 24/7 medical care.",
+  keywords: ["rehab center kharagpur", "de-addiction center west bengal", "drug rehab", "alcohol rehabilitation", "Sudarshan Recovery Center"],
+  authors: [{ name: "Sudarshan Recovery Center" }],
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://www.sudarshanrecovery.org",
+    title: "Sudarshan Recovery Center",
+    description: "Your safe path to addiction recovery with clinical excellence.",
+    siteName: "Sudarshan Recovery Center",
+    images: [{
+      url: "/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "Sudarshan Recovery Center Clinical Facility"
+    }]
+  }
 };
 
 export default function RootLayout({
@@ -19,6 +38,39 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Sudarshan De-Addiction and Research Center",
+    "alternateName": "Sudarshan Recovery Center",
+    "image": "https://www.sudarshanrecovery.org/images/hero.jpg",
+    "description": "Leading non-profit medical rehab facility specializing in de-addiction and mental health research.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Malancha Road, Near Inda Overbridge",
+      "addressLocality": "Kharagpur",
+      "addressRegion": "Paschim Medinipur, West Bengal",
+      "postalCode": "721301",
+      "addressCountry": "IN"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 22.335359,
+      "longitude": 87.218556
+    },
+    "url": "https://www.sudarshanrecovery.org",
+    "telephone": "+919804188668",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      }
+    ],
+    "award": "ISO 9001:2015 Certified Facility"
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
@@ -26,10 +78,12 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
           rel="stylesheet"
         />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
-      <body
-        className={`${publicSans.variable} antialiased`}
-      >
+      <body className={`${publicSans.className} antialiased`}>
         <Providers>
           {children}
         </Providers>
