@@ -8,10 +8,10 @@ export default function MobileNav() {
 
     const tabs = [
         { name: "Home", href: "/", icon: "home" },
-        { name: "Gallery", href: "/gallery", icon: "photo_library" },
+        { name: "Admission", href: "/admission", icon: "assignment" },
         { name: "Call", href: "tel:+919804188668", icon: "call", isAction: true },
-        { name: "Location", href: "/contact", icon: "location_on" },
-        { name: "Menu", href: "/about", icon: "clinical_notes" },
+        { name: "Treatments", href: "/treatments", icon: "medical_services" },
+        { name: "Contact", href: "/contact", icon: "contact_support" },
     ];
 
     return (

@@ -42,14 +42,14 @@ export default function Footer() {
                                 <ul className="flex flex-col gap-6 text-[13px] font-bold text-slate-300">
                                     <li><Link className="hover:text-primary transition-colors block py-1" href="/treatments">Our Programs</Link></li>
                                     <li><Link className="hover:text-primary transition-colors block py-1" href="/admission">Admission</Link></li>
-                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/gallery">Facility Tour</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/gallery">Gallery</Link></li>
                                     <li><Link className="hover:text-primary transition-colors block py-1" href="/contact">Get Help</Link></li>
                                 </ul>
                             </div>
                             <div className="flex flex-col items-center md:items-start text-center md:text-left">
                                 <h6 className="text-[10px] text-white font-black uppercase tracking-[0.3em] mb-8 opacity-50">Institutional</h6>
                                 <ul className="flex flex-col gap-6 text-[13px] font-bold text-slate-300">
-                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/about">About Center</Link></li>
+                                    <li><Link className="hover:text-primary transition-colors block py-1" href="/about">About Us</Link></li>
                                     <li><Link className="hover:text-primary transition-colors block py-1" href="/vision">Medical Vision</Link></li>
                                     <li><Link className="hover:text-primary transition-colors block py-1" href="/about#team">Clinical Team</Link></li>
                                 </ul>
